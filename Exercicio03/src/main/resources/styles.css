@@ -1,0 +1,152 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+#header
+{
+  display: flex;
+  align-content: center;
+}
+
+#titulo
+{
+  margin: 20px auto;
+}
+
+body
+{
+  background-color:rgb(242, 253, 254);
+}
+
+#main 
+{
+  margin: 0px 3%;
+  padding: 10px 20px 20px;
+  background-color:rgb(147, 208, 212);
+  border-radius: 10px;
+}
+
+#camposInserir
+{
+  display: flex;
+  align-content: space-between;
+}
+
+.inputInserir
+{
+  padding: 4px;
+  border-radius: 6px;
+  margin: 10px 10px;
+}
+
+#inserir
+{
+  margin: 10px 0px;
+}
+
+#mostrarTodos
+{
+  margin: 10px 0px;
+}
+
+#containerResposta
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mostrarResposta
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: rgb(146, 132, 227);
+  border-radius: 10px;
+}
+
+
+#mensagem
+{
+  padding: 10px 20px;
+  color:black;
+  font-size: 20px;
+}
+
+#inserir
+{
+  background-color:rgb(146, 132, 227);
+  border: 0px;
+  border-radius: 6px;
+  padding: 7px 12px;
+}
+
+#mostrarTodos
+{
+  background-color:rgb(146, 132, 227);
+  border: 0px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 7px 12px;
+}
+
+#mostrarLista
+{
+  width: 100%;
+  border: 2px solid;
+  border-color: black;
+  border-collapse: collapse;
+}
+
+.tableCell
+{
+  padding: 10px;
+  font-weight: normal;
+}
+
+#table-body .inputInserir
+{
+  width: 85%;
+}
+
+#table-body tr
+{
+  position: relative;
+}
+
+#botoesEdicao
+{
+  position: absolute;
+  top: -140%;
+  left: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#botoesEdicao button
+{
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin: 10px;
+  color: white;
+}
+
+#botoesEdicao button:hover
+{
+  cursor: pointer;
+  width: 101%;
+}
+
+#botaoConfirmarEdicao
+{
+  background-color: rgb(50, 166, 50);
+}
+
+#botaoCancelarEdicao
+{
+  background-color: rgb(212, 26, 26);
+}
