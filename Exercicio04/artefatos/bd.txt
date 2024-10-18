@@ -1,0 +1,3 @@
+URL: pucmgti.postgres.database.azure.com 
+Usuário: adm
+Senha: Enter6#a
