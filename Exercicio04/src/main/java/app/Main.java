@@ -36,7 +36,7 @@ public class Main {
     {
     //Testar se resposta foi bem sucedida
       if (!response.isSuccessful()) throw new IOException("Erro na requisição: " + response);
-     //Retornar resultado bem sucedido
+    //Retornar resultado bem sucedido
       return response.body().string();
     }
   }
@@ -60,19 +60,19 @@ public class Main {
     return name;
   }
   
-  public static boolean hasConfidence(JsonObject object, double limite) 
+  public static boolean temConfianca(JsonObject object, double limite) 
   {
   //Definir dados locais
     double confidence = object.get("confidence").getAsDouble();
   //Testar confianca do elemento em si
     if (confidence >= limite) return true;
-  // Verificar se o objeto tem "parent"
+  //Verificar se o objeto tem "parent"
     if ( object.has("parent") ) 
     {
-        JsonObject parent = object.getAsJsonObject("parent"); //Identificar o parent
-        return hasConfidence(parent, limite); //Verificar recursivamente
+      JsonObject parent = object.getAsJsonObject("parent"); //Identificar o parent
+      return temConfianca(parent, limite); //Verificar recursivamente
     }
- //Retornar
+  //Retornar
     return false;
   }
   
@@ -89,7 +89,7 @@ public class Main {
   //Iterar para cada elemento no aray e adicioanr a contagem no HashMap
     for (JsonElement element : objects)
     {      	
-    	if ( hasConfidence(element.getAsJsonObject(), limite) )
+    	if ( temConfianca(element.getAsJsonObject(), limite) )
     	{
     		String objectName = element.getAsJsonObject().get("object").getAsString();
     		contagem.put(objectName, contagem.getOrDefault(objectName, 0) + 1);    		
